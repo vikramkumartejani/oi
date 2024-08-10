@@ -9,7 +9,7 @@ import Comparador from './pages/Comparador/Comparador';
  
 function App() {
   return (
-    <div>
+    <div className="bg-[#F6FFF9]">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -17,7 +17,7 @@ function App() {
         <Route path="/description" element={<Description />} />
         <Route path="/comparador" element={<Comparador />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
