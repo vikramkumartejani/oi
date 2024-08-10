@@ -69,7 +69,7 @@ const FinancialSection = () => {
   return (
     <div className="relative text-white">
       <img
-        className="absolute w-full h-[91vh] object-cover z-[1]"
+        className="absolute w-full md:h-[91vh] h-screen object-cover z-[1]"
         src={backgroundImg}
         alt="background-img"
       />
