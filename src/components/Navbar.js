@@ -12,7 +12,7 @@ const Navbar = () => {
     };
 
     return (
-        <div className='bg-[#155E59] w-full h-[67px] flex items-center px-3 sm:px-5'>
+        <div className='bg-[#155E59] fixed z-10 w-full h-[67px] flex items-center px-3 sm:px-5'>
             <div className='flex items-center justify-between w-full max-w-[1240px] mx-auto'>
                 <button className='md:hidden block' onClick={toggleMenu}>
                     <img src={menuOpen ? MenuIcon : MenuIcon} alt='Menu' />
@@ -23,7 +23,7 @@ const Navbar = () => {
                 <div className='hidden md:flex items-center'>
                     <ul className='flex items-center gap-7 text-white'>
                         <li><a href='/' className='text-[13px] font-bold'>Tarjetas de Crédito</a></li>
-                        <li><a href='/' className='text-[13px] font-bold'>Reseñas de Tarjetas</a></li>
+                        <li><a href='/description' className='text-[13px] font-bold'>Reseñas de Tarjetas</a></li>
                         <li><a href='/comparador' className='text-[13px] font-bold'>Comparador</a></li>
                         <li><a href='/blog' className='text-[13px] font-bold'>Blog</a></li>
                     </ul>
@@ -41,7 +41,7 @@ const Navbar = () => {
                     <div className='absolute top-[67px] left-0 w-full bg-white z-10 py-10 shadow-2xl border-[#155E59] border-b'>
                         <ul className='flex flex-col items-center gap-4 text-black'>
                             <li><a href='/' className='text-[13px] font-bold'>Tarjetas de Crédito</a></li>
-                            <li><a href='/' className='text-[13px] font-bold'>Reseñas de Tarjetas</a></li>
+                            <li><a href='/description' className='text-[13px] font-bold'>Reseñas de Tarjetas</a></li>
                             <li><a href='/comparador' className='text-[13px] font-bold'>Comparador</a></li>
                             <li><a href='/blog' className='text-[13px] font-bold'>Blog</a></li>
                         </ul>
