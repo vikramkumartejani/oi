@@ -166,7 +166,7 @@ const CardsWithPagination = () => {
 
   return (
     <div className="mt-[30px]">
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
+      <section className="grid grid-cols-1 md:grid-cols-3 md:gap-[30px] gap-[40px]">
         {currentArticles.map((article, index) => (
           <div key={index} className="flex flex-col gap-[20px]">
             <img

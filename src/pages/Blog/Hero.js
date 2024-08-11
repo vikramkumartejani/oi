@@ -4,7 +4,7 @@ import blogImg1 from "../../assets/blog-img1.png";
 
 const Hero = () => {
   return (
-    <section className="flex md:flex-row flex-col justify-between md:pt-[65px] pb-[31px] lg:gap-[75px] gap-[30px]">
+    <section className="flex md:flex-row flex-col justify-between md:pt-[65px] md:pb-[31px] lg:gap-[75px] gap-[30px]">
       <div className="flex flex-col justify-center md:py-[66.5px] py-[40px] text-left md:w-[70%] w-full md:gap-0 gap-[10px]">
         <h1 className="lg:text-[45px] md:text-[31px] text-[24px] font-[500] lg:leading-[65px] md:leading-[45px] leading-[36px]">
           Nuestro blog financiero, el más{" "}
@@ -20,7 +20,7 @@ const Hero = () => {
         />
         <div className="flex flex-wrap gap-[15px] md:mt-[50px] mt-[20px]">
           <input
-            className="flex-grow px-[26px] bg-white border border-[#DDDDDD] py-[10.5px] placeholder:text-[#72778A] rounded-[10px] "
+            className="flex-grow px-[26px] bg-white border border-[#DDDDDD] py-[10.5px] placeholder:text-[#72778A] rounded-[10px] w-[200px]"
             type="text"
             placeholder="Email"
           />

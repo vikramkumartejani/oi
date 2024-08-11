@@ -32,16 +32,17 @@ const CardSection = () => {
     <section>
       <div className="relative max-w-[447px] mb-[30px]">
         <input
-          className="flex-grow px-[26px] bg-white border border-[#DDDDDD] py-[10.5px] placeholder:text-[#72778A] rounded-[10px] flex-grow w-full"
+          className="flex-grow px-[26px] bg-white border border-[#DDDDDD] py-[10.5px] placeholder:text-[#72778A] rounded-[10px] w-full"
           type="text"
           placeholder="Buscar"
         />
         <svg
-          className="absolute top-1/2 right-[16px] w-[18px] transform -translate-y-1/2" // Centered vertically and positioned on the right
+          className="absolute top-1/2 right-[16px] w-[18px] transform -translate-y-1/2"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
+          color="#111827"
           viewBox="0 0 24 24"
-          strokeWidth="1.5"
+          strokeWidth="2"
           stroke="currentColor"
         >
           <path
