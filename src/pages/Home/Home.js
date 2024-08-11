@@ -5,7 +5,7 @@ import CardsWithPagination from "../../components/CardsWithPagination";
 
 const Home = () => {
   return (
-    <div className="">
+    <div className="pt-[67px]">
       <FinancialSection />
       <Newsletter />
       <section className="lg:px-[100px] md:px-[50px] px-[25px] md:mb-[110px] mb-[100px]">

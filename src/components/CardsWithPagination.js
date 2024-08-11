@@ -178,7 +178,14 @@ const CardsWithPagination = () => {
               {article.title}
             </h2>
             <div>
-              <p className="lg:text-[16px] md:text-[15px] text-[14px] font-[300] lg:leading-[24px] md:leading-[22px] leading-[21px] text-[#72778A]">
+              <p
+                className="lg:text-[16px] md:text-[15px] text-[14px] font-[300] lg:leading-[24px] md:leading-[22px] leading-[21px] text-[#72778A] overflow-hidden text-ellipsis"
+                style={{
+                  display: "-webkit-box",
+                  WebkitLineClamp: 7,
+                  WebkitBoxOrient: "vertical",
+                }}
+              >
                 {article.description}
               </p>
               <a
