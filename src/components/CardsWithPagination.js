@@ -117,14 +117,14 @@ const articles = [
 const articlesPerPage = 3; // Define how many articles you want to display per page
 
 const Pagination = ({ currentPage, setCurrentPage, totalPages }) => (
-  <div className="flex justify-between items-center mt-[30px] space-x-2 border-t pt-[20px]">
+  <div className="flex flex-wrap justify-between items-center mt-[30px] gap-2 border-t pt-[20px]">
     <button
       onClick={() => setCurrentPage(currentPage - 1)}
       disabled={currentPage === 1}
       className="bg-[#155E59] text-white py-2 px-4 rounded-lg flex items-center font-[600] text-[14px] leading-[21px] gap-[15px]"
     >
       <FiArrowLeft />
-      <span>Anterior</span>
+      <span className="md:flex hidden">Anterior</span>
     </button>
     <div className="rounded-[10px] overflow-hidden">
       {[...Array(totalPages)].map((_, index) => (
@@ -147,9 +147,9 @@ const Pagination = ({ currentPage, setCurrentPage, totalPages }) => (
     <button
       onClick={() => setCurrentPage(currentPage + 1)}
       disabled={currentPage === totalPages}
-      className="bg-[#155E59] text-white py-2 px-4 rounded-lg flex items-center gap-[15px] font-[600] text-[14px] leading-[21px]"
+      className="bg-[#155E59] md:h-auto h-[45px] text-white py-[10px] px-4 rounded-lg flex items-center gap-[15px] font-[600] text-[14px] leading-[21px]"
     >
-      <span>Siguiente</span>
+      <span className="md:flex hidden">Siguiente</span>
       <FiArrowRight />
     </button>
   </div>
