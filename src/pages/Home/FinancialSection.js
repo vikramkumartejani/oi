@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import backgroundImg from "../../assets/bg-gradient.svg";
+import backgroundImgMobile from "../../assets/bg-gradient-mobile.svg";
 import creditCardImg from "../../assets/credit-card.svg";
 import tabImg1 from "../../assets/tab-img1.jpg";
 
@@ -69,8 +70,13 @@ const FinancialSection = () => {
   return (
     <div className="relative text-white">
       <img
-        className="absolute w-full md:h-[91vh] h-screen object-cover z-[1]"
+        className="md:flex hidden absolute w-full md:h-[91vh] h-screen object-cover z-[1]"
         src={backgroundImg}
+        alt="background-img"
+      />
+      <img
+        className="md:hidden flex absolute w-full md:h-[91vh] h-screen object-cover z-[1]"
+        src={backgroundImgMobile}
         alt="background-img"
       />
       <div className="relative flex md:flex-row flex-col justify-between lg:px-[80px] md:px-[50px] px-[25px] z-[2]">
@@ -98,10 +104,11 @@ const FinancialSection = () => {
             {Object.keys(tabData).map((tab) => (
               <li
                 key={tab}
-                className={`p-[10px] cursor-pointer xl:text-[16px] text-center lg:text-[15px] text-[16px] font-[400] leading-[16px] ${activeTab === tab
-                  ? "bg-white text-[#155E59] border-b-4 border-b-[#155E59]"
-                  : "bg-white text-[#72778A]"
-                  }`}
+                className={`p-[10px] cursor-pointer xl:text-[16px] text-center lg:text-[15px] text-[16px] font-[400] leading-[16px] ${
+                  activeTab === tab
+                    ? "bg-white text-[#155E59] border-b-4 border-b-[#155E59]"
+                    : "bg-white text-[#72778A]"
+                }`}
                 onClick={() => setActiveTab(tab)}
               >
                 {tab}
