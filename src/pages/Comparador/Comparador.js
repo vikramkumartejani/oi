@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import Hero from "./Hero";
+import Hero from "../../components/Hero";
 import card1 from "../../assets/card1.svg";
 import card2 from "../../assets/card2.svg";
 import card3 from "../../assets/card3.svg";
+import comparadorImg from "../../assets/comparador-img.png";
 
 // Sample card data
 const cardOptions = [
@@ -116,21 +117,27 @@ const Comparador = () => {
 
   return (
     <div className="pt-[67px]">
-      <Hero />
+      <Hero heading="Comparador de tarjetas" heroImage={comparadorImg} />
       <section className="lg:px-[100px] md:px-[50px] pt-[25px] pb-[110px] px-[25px]">
         <div className="text-[#061A23]">
           <h3 className="font-[600] md:text-[30px] text-[22px] md:leading-[45px] leading-[33px]">
             Selecciona las tarjetas a comparar
           </h3>
-          <p className="mt-[10px] text-[16px] font-[400] leading-[24px]">
+          <p className="md:block hidden mt-[10px] text-[16px] font-[400] leading-[24px]">
             Compara y elige la mejor opción para ti
           </p>
+          <p className="md:hidden block mt-[12px] text-[14px] font-[400] leading-[21px]">
+            Ofrecemos una amplia gama de artículos sobre productos financieros
+            como tarjetas de crédito, débito y préstamos personales. ¿Cómo
+            podemos ayudarte a gestionar mejor tu{" "}
+            <span className="font-[700]"> economía </span> hoy?
+          </p>
         </div>
-        <div className="flex md:flex-row flex-col justify-around gap-[25px] mt-[50px] xl:px-[67px] lg:px-[40px] px-[13px]">
+        <div className="flex md:flex-row flex-col justify-around gap-[25px] md:mt-[50px] mt-[20px] xl:px-[67px] lg:px-[40px] px-[13px]">
           {["box1", "box2", "box3"].map((box) => (
             <div key={box} className="flex flex-col w-full items-center">
               <div
-                className="w-full lg:h-[217px] md:h-[150px] h-[225px] flex flex-col items-center justify-center border-2 border-dotted border-[#72778A] rounded-[20px]"
+                className="w-full max-w-[356px] lg:h-[217px] md:h-[150px] h-[225px] flex flex-col items-center justify-center border-2 border-dotted border-[#72778A] rounded-[20px]"
                 style={{ boxShadow: "17px 17px 25px 0px #00000014" }}
               >
                 {selectedCards[box] ? (
@@ -184,7 +191,7 @@ const Comparador = () => {
         {/* Comparison Table */}
         {selectedCardsArray.length >= 3 && (
           <div className="md:mt-[84px] mt-[50px]">
-            <table className="w-full  rounded-[4px] border border-[#E0E0E0]">
+            <table className="w-full bg-white rounded-[4px] border border-[#E0E0E0]">
               <thead className="bg-[#F0F0F0] text-left">
                 <tr>
                   <th className="px-[22px] py-[15px] text-[14px] text-[#818181] font-[400] leading-[20px]">
@@ -238,7 +245,12 @@ const Comparador = () => {
                     >
                       <td className="px-[22px] py-[15px]">x1</td>
                       <td className="px-[22px] py-[15px]">x2</td>
-                      <td className="px-[22px] py-[15px]">x3</td>
+                      <td className="px-[22px] py-[15px] flex flex-col">
+                        <span className="text-[#1672EC]">x3</span>
+                        <span className="text-[#A1A1A1] text-[12px] leading-[18px]">
+                          x3
+                        </span>
+                      </td>
                     </tr>
                   </>
                 ))}
