@@ -31,9 +31,9 @@ const Modal = ({ isOpen, onClose, onSelect }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="relative bg-white md:max-w-[768px] md:h-auto h-[70vh] mx-[25px] p-8 rounded-[20px] overflow-y-auto">
+      <div className="relative bg-white md:max-w-[768px] sm:h-auto h-[400px] mx-[25px] p-8 rounded-[20px] overflow-y-auto">
         <h2 className="text-lg font-semibold mb-4">Select a Card</h2>
-        <div className="flex flex-wrap justify-center items-center items-center gap-4">
+        <div className="flex sm:flex-nowrap flex-wrap  justify-center items-center items-center gap-4">
           {cardOptions.map((card) => (
             <div
               key={card.id}
@@ -46,7 +46,7 @@ const Modal = ({ isOpen, onClose, onSelect }) => {
               <img
                 src={card.image}
                 alt={card.name}
-                className="md:w-fit w-[200px] h-fit object-cover rounded-[20px]"
+                className="sm:w-fit w-[100px] h-fit object-cover sm:rounded-[20px] rounded-[10px]"
               />
               <p className="text-center mt-2 font-semibold">{card.name}</p>
             </div>
