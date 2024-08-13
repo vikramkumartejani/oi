@@ -1,46 +1,7 @@
 import React, { useState } from "react";
 import Hero from "../../components/Hero";
-import card1 from "../../assets/card1.svg";
-import card2 from "../../assets/card2.svg";
-import card3 from "../../assets/card3.svg";
+import { cardsData } from "../../assets/data/creditCardData";
 import comparadorImg from "../../assets/comparador-img.png";
-
-// Sample card data
-const cardOptions = [
-  {
-    id: 1,
-    name: "Nombre de la tarjeta",
-    image: card1,
-    rating: "4.8",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    category: "Rubro",
-    multiplier: "x1",
-    itemVariable: "Item variable",
-  },
-  {
-    id: 2,
-    name: "Nombre de la tarjeta",
-    image: card2,
-    rating: "4.8",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    category: "Rubro",
-    multiplier: "x2",
-    itemVariable: "Item variable",
-  },
-  {
-    id: 3,
-    name: "Nombre de la tarjeta",
-    image: card3,
-    rating: "4.8",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    category: "Rubro",
-    multiplier: "x3",
-    itemVariable: "Item variable",
-  },
-];
 
 const Modal = ({ isOpen, onClose, onSelect }) => {
   if (!isOpen) return null;
@@ -50,7 +11,7 @@ const Modal = ({ isOpen, onClose, onSelect }) => {
       <div className="relative bg-white md:max-w-[768px] sm:h-auto h-[400px] mx-[25px] p-8 rounded-[20px] overflow-y-auto">
         <h2 className="text-lg font-semibold mb-4">Select a Card</h2>
         <div className="flex sm:flex-nowrap flex-wrap justify-center items-center gap-4">
-          {cardOptions.map((card) => (
+          {cardsData.map((card) => (
             <div
               key={card.id}
               className="cursor-pointer"
@@ -62,14 +23,14 @@ const Modal = ({ isOpen, onClose, onSelect }) => {
               <img
                 src={card.image}
                 alt={card.name}
-                className="sm:w-fit w-[100px] h-fit object-cover sm:rounded-[20px] rounded-[10px]"
+                className="mx-auto sm:w-fit w-[100px] h-fit object-cover sm:rounded-[20px] rounded-[10px]"
               />
               <p className="text-center mt-2 font-semibold">{card.name}</p>
             </div>
           ))}
         </div>
         <button
-          className="absolute top-0 right-5 mt-6 text-red-500 text-white px-4 py-2 rounded-lg"
+          className="absolute top-0 right-5 mt-6 text-red-500 px-4 py-2 rounded-lg"
           onClick={onClose}
         >
           <svg
