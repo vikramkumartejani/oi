@@ -4,7 +4,7 @@ import { cardsData } from "../assets/data/creditCardData";
 const DescriptionTable = () => {
   return (
     <section className="lg:px-[100px] md:px-[50px] pt-[25px] pb-[65px] px-[25px]">
-      <div className="text-[#061A23]">
+      <div className="text-[#061A23] max-w-[786px]">
         <h3 className="font-[600] md:text-[30px] text-[22px] md:leading-[45px] leading-[33px]">
           Un claim, <span className="text-[#155E59]"> recomendaciones </span> de
           relleno
