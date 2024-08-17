@@ -1,19 +1,27 @@
 import React from "react";
-import backgroundImg from "../assets/bg-gradient.svg";
-import backgroundImgMobile from "../assets/bg-gradient-mobile.svg";
+import bgOverlay from "../assets/bg-overlay.png";
 import NewsletterImg from "../assets/newsletter-img.png";
 
 const Newsletter = () => {
   return (
     <section className="relative flex items-center justify-between md:mb-[80px] mb-[50px] lg:min-h-[226px] min-h-[265px]">
-      <img
+      <div
         className="md:flex hidden absolute w-full h-full object-cover z-[1]"
-        src={backgroundImg}
-        alt="background-img"
-      />
-      <img
+        style={{
+          background:
+            "linear-gradient(220deg, #DEEFE3 1.79%, #64BC92 59.03%, #67BDBD 85%, #FFFFFF 120%)",
+        }}
+      ></div>
+      <div
         className="md:hidden flex absolute w-full h-full object-cover z-[1]"
-        src={backgroundImgMobile}
+        style={{
+          background:
+            "linear-gradient(230deg, #DEEFE3, #64BC92 -1%, #67BDBD 80%, #FFFFFF 120%)",
+        }}
+      ></div>
+      <img
+        className="absolute w-full h-full object-cover z-[1] mix-blend-overlay"
+        src={bgOverlay}
         alt="background-img"
       />
       <div className="lg:w-[50%] w-full z-[2] lg:ps-[100px] md:ps-[50px] md:pe-[50px] md:py-[33px] py-[25px] px-[25px]">

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import backgroundImg from "../../assets/bg-gradient.svg";
-import backgroundImgMobile from "../../assets/bg-gradient-mobile.svg";
+import bgOverlay from "../../assets/bg-overlay.png";
 import creditCardImg from "../../assets/credit-card.svg";
 import tabImg1 from "../../assets/tab-img1.jpg";
 
@@ -69,16 +68,26 @@ const FinancialSection = () => {
 
   return (
     <div className="relative text-white">
-      <img
+      <div
         className="md:flex hidden absolute w-full md:h-[91vh] h-screen object-cover z-[1]"
-        src={backgroundImg}
-        alt="background-img"
-      />
-      <img
+        style={{
+          background:
+            "linear-gradient(200.38deg, #DEEFE3 1.79%, #64BC92 59.03%, #67BDBD 74.73%, #FFFFFF 100%)",
+        }}
+      ></div>
+      <div
         className="md:hidden flex absolute w-full md:h-[91vh] h-screen object-cover z-[1]"
-        src={backgroundImgMobile}
+        style={{
+          background:
+            "linear-gradient(230deg, #DEEFE3, #64BC92 -1%, #67BDBD 80%, #FFFFFF 120%)",
+        }}
+      ></div>
+      <img
+        className="absolute w-full h-screen object-cover z-[1] mix-blend-overlay"
+        src={bgOverlay}
         alt="background-img"
       />
+
       <div className="relative flex md:flex-row flex-col justify-between lg:px-[80px] md:px-[50px] px-[25px] z-[2]">
         <div className="flex flex-col justify-center md:py-[100px] py-[40px] text-left md:w-[60%] w-full md:gap-0 gap-[10px]">
           <h1 className="lg:text-[45px] md:text-[31px] text-[24px] font-[500] lg:leading-[65px] md:leading-[45px] leading-[36px]">
